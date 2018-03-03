@@ -1,0 +1,28 @@
+<div class="span5 post-info" id="sidebar" style="width: 310px;">
+                  <ul class="info_list" style="left: 1291.5px;">
+                    <li class="info_li rm">
+                      <div class="prev_atc"> <span>热门文章</span> <span class="line"><b></b></span> </div>
+                      <ul class="rm_wz" id="phcontent">
+                      <stl:contents topLevel="0" scope="All" order="Hits" totalNum="10">
+                      <stl:if testType="ItemIndex" testOperate="In" testValue="1,2,3">
+                      <stl:yes>
+                        <li><span style="color:#f54343; margin-top:0px;">{Content.ItemIndex}</span><stl:a target="_blank"><stl:content type="Title" wordNum="14" ellipsis="..."></stl:content></stl:a></li>
+                      </stl:yes>
+                      <stl:no>
+                        <li><span style=" margin-top:0px;">{Content.ItemIndex}</span><stl:a target="_blank"><stl:content type="Title" wordNum="14" ellipsis="..."></stl:content></stl:a></li>
+                        </stl:no>
+                        </stl:if>
+                      </stl:contents>
+                      </ul>
+                    </li>
+                    <li class="info_li lm">
+                      <div class="prev_atc"> <span><a href="javascript:;">栏目分类</a></span> <span class="line"><b></b></span> </div>
+                      <ul class="mu_fl" id="usernotebook">
+                      <stl:channels topLevel="0" groupChannel="nav">
+                        <li><stl:a>{Channel.Title}</stl:a></li>
+                      </stl:channels>
+                      </ul>
+                    </li>
+                    
+                  </ul>
+                </div>

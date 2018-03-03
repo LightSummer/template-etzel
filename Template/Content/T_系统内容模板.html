@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="screen-scroll">
+  <head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>{Content.Title}-{Stl.SiteName}</title>
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/bootstrap-tagsinput.css">
+    <link href="{Stl.SiteUrl}/css/adetails.css" rel="stylesheet">
+    <link href="{Stl.SiteUrl}/css/bdetails.css" rel="stylesheet">
+    <link href="{Stl.SiteUrl}/css/medium-editor-insert-plugin.min.css" rel="stylesheet"> 
+    <link href="{Stl.SiteUrl}/css/lightbox.css" rel="stylesheet">
+    <script src="{Stl.SiteUrl}/js/jquery.min.js"></script>
+    <script src="{Stl.SiteUrl}/js/bootstrap.min.js"></script>
+  </head>
+  <body class="per_main details">
+    <div 
+    class="post-field Basic_h"
+    >
+      <div class="cover-image" style="background-image : url({stl.siteurl}/images/preface3.jpg);"></div>
+      <div class="image-mask-down"  style="background: url({stl.siteurl}/images/bg_zz.png) repeat;opacity: 0.15;filter: alpha(opacity=15)"></div>
+      <div class="userbox" style="overflow: hidden; width: auto; ">
+        <div class="userintro">
+          <div class="base-info">
+            <div class="relative">
+              <div class="avatar-name" > <a href="{Stl.SiteUrl}/" > {Channel.top1.Title} </a> </div>
+              <div class="avatar-photo color_e58951" id = "userimg"> <a href="{Stl.SiteUrl}/"> <span class="s"><stl:channel topLevel="1" wordNum="1" ellipsis=" " type="Title"></stl:channel></span> <span class="c">{Channel.top1.Title}</span> </a> </div>
+              <div class="qrcode-box">
+                <div class="qrcode-bd" id="qrcodeCanvas"></div>
+              </div>
+            </div>
+            <div>
+              <div class="btn-toolbar" role="toolbar" style=" position: relative;">
+                <div class="btn_gz" id ='followtrends'> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="article" style="position: absolute;bottom: 60px;left: 0;"></div>
+    </div> 
+    <!--导航开始-->
+    <stl:include file="/include/nav.html"></stl:include> 
+    <!--导航结束--> 
+    <div class="notybox"></div>
+    <div class="container wz">
+      <div class="content" id="wzHeight" >
+        <div class="title">
+          <div class="d_testbox"><stl:content type="Title"></stl:content></div> 
+        </div>
+        <span class="img_tjsy"><img src="{Stl.SiteUrl}/images/tjsy.png" alt=""/></span>
+        <div class="meta-top">
+          <span class="time"><stl:content type="AddDate" formatString="yyyy-MM-dd HH:mm:ss"></stl:content></span><label class="lm_name">栏目：<span><stl:a>{Channel.Title}</stl:a></span></label>
+          <ul class="num_hot">
+            <li><i class="icon-eye"><img src="{Stl.SiteUrl}/images/shu.png" alt=""></i><span  id="browse_record"><stl:content type="Hits" isDynamic="true"></stl:content></span></li>
+          </ul>
+        </div>
+        <div class="article">
+          
+          <div class="editable">
+            <stl:content type="Content"></stl:content>
+          </div>
+        </div>
+        <div class="absolute_btn">
+        </div>
+      </div>
+      
+      
+      
+      <div class="prev_t">
+        <div class="prev_atc">
+          <span>阅读前一篇</span>
+          <b class="line"></b>
+        </div>
+        <h2><stl:navigation type="PreviousContent" emptyText="无"></stl:navigation></h2></div>
+      
+      
+    </div>
+    <!--return top end-->
+    <stl:include file="/include/fixed.html"></stl:include>
+    
+    <stl:include file="/include/footer.html"></stl:include>
+    
+    
+  </body>
+  <script type="text/javascript" src="{Stl.SiteUrl}/js/jweixin-1.0.0.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.scrollify.min.js"></script> 
+  <script src="{Stl.SiteUrl}/js/main.js"></script> 
+  <script src="{Stl.SiteUrl}/js/jquery.qrcode.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.validate-1.13.1.js"></script>
+  <script src="{Stl.SiteUrl}/js/fingerprint.js"></script>   
+  <script src="{Stl.SiteUrl}/js/common.js"></script>
+  
+  <script src="{Stl.SiteUrl}/js/articles.js"></script>
+  <script src="{Stl.SiteUrl}/js/lightbox.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.noty.packaged.min.js"></script> 
+  <script src="{Stl.SiteUrl}/js/search.js"></script>   
+  <script type="text/javascript" src="{Stl.SiteUrl}/js/weixinview.js"></script>
+</html>

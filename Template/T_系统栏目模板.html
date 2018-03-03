@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="screen-scroll">
+  <head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>{Channel.Title}-{Stl.SiteName}</title>
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/bootstrap-tagsinput.css">
+    <link href="{Stl.SiteUrl}/css/adetails.css" rel="stylesheet">
+    <link href="{Stl.SiteUrl}/css/medium-editor-insert-plugin.min.css" rel="stylesheet">
+    <script src="{Stl.SiteUrl}/js/jquery.min.js"></script>
+    <script src="{Stl.SiteUrl}/js/bootstrap.min.js"></script>
+  </head>
+  <body class="per_main details">
+    <div 
+    class="post-field Basic_h"
+    >
+      <div class="cover-image" style="background-image : url({stl.siteurl}/images/preface3.jpg);"></div>
+      <div class="image-mask-down"  style="background: url({stl.siteurl}/images/bg_zz.png) repeat;opacity: 0.15;filter: alpha(opacity=15)"></div>
+      <div class="userbox" style="overflow: hidden; width: auto; ">
+        <div class="userintro">
+          <div class="base-info">
+            <div class="relative">
+              <div class="avatar-name" > <a href="{Stl.SiteUrl}/" > {Channel.top1.Title} </a> </div>
+              <div class="avatar-photo color_e58951" id = "userimg"> <a href="{Stl.SiteUrl}/"> <span class="s"><stl:channel topLevel="1" wordNum="1" ellipsis=" " type="Title"></stl:channel></span> <span class="c">{Channel.top1.Title}</span> </a> </div>
+              <div class="qrcode-box">
+                <div class="qrcode-bd" id="qrcodeCanvas"></div>
+              </div>
+            </div>
+            <div>
+              <div class="btn-toolbar" role="toolbar" style=" position: relative;">
+                <div class="btn_gz" id ='followtrends'> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="article" style="position: absolute;bottom: 60px;left: 0;"></div>
+    </div>
+    <!--导航开始-->
+    <stl:include file="/include/nav.html"></stl:include> 
+    <!--导航结束-->
+    <div class="notybox"></div>
+    <div class="container ztList all_wz nocont" id ="articlelistloading">
+      <div class="ztList_inner">
+        <div class="lb">
+          <div class="list_title unselectable"> <span><a href="javascript:;" id ="allarticle">全部<img src="{Stl.SiteUrl}/images/wenzhang1.png" alt=""/></a></span>
+            <div class="zt_name">
+              <ul>
+                <li></li>
+                <li></li>
+                <li>(<stl:count></stl:count>)</li>
+                <li class="zt_control"><i id="" class="fa fa-th"></i></li>
+              </ul>
+            </div>
+            <span class="right unselectable"><i class="fa fa-reorder fa_jj"></i></span> </div>
+          <ul class="mu_fl fl_silde">
+          </ul>
+          <!--     class=" fz_modal"-->
+          <div class="dateclass fz_modal time">
+            <div class="bd">
+              <ul class="yearnum">
+                <li>
+                  <dl class="monthnum" style="display: block;">
+                    <dd>
+                      <dl class="detailnum" style="display: block;">
+                        <stl:pageContents pageNum="10" order="AddDate">
+                          <stl:if testType="IsRecommend" testOperate="Equals" testValue="true">
+                            <stl:yes>
+                              <dd class="img_box" lastpagetime="1517821350" date="201802"> <stl:a   target='_blank'>
+                                <div class="wz_l">
+                                  <h3> <img src="{stl.siteurl}/images/jian.png" alt="2"/> <stl:content type="Title" wordNum="30" ellipsis="..."></stl:content>
+                                    
+                                  </h3>
+                                  <p>
+                                    <stl:if testType="Summary" testOperate="NotEmpty">
+                                      <stl:yes>
+                                        <stl:content type="Summary" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:yes>
+                                      <stl:no>
+                                        <stl:content type="Content" isClearTags="true" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:no>
+                                    </stl:if>
+                                  </p>
+                                  <div class="t_wz">
+                                    <ul class="num_hot" id="num_hot_910055999"  aid="910055999">
+                                      <li><i class="icon-eye"><img src="{stl.siteurl}/images/shu.png" alt=""/></i><stl:content type="Hits"></stl:content></li>
+                                      
+                                    </ul>
+                                    <span class="pull-left"><stl:content type="AddDate" formatString="yyyy.MM.dd hh:mm"></stl:content></span> </div>
+                                </div>
+                                </stl:a> </dd>
+                            </stl:yes>
+                            <stl:no>
+                              <dd class="img_box" lastpagetime="1518081167"> <stl:a  target='_blank'>
+                                <div class="wz_l">
+                                  <h3> <stl:content type="Title"></stl:content>
+                                    
+                                  </h3>
+                                  <p>
+                                    <stl:if testType="Summary" testOperate="NotEmpty">
+                                      <stl:yes>
+                                        <stl:content type="Summary" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:yes>
+                                      <stl:no>
+                                        <stl:content type="Content" isClearTags="true" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:no>
+                                    </stl:if>
+                                  </p>
+                                  <div class="t_wz">
+                                    <ul class="num_hot" id="num_hot_490569255"  aid="490569255">
+                                      <li><i class="icon-eye"><img src="{stl.siteurl}/images/shu.png" alt=""/></i><stl:content type="Hits"></stl:content></li>
+                                      
+                                    </ul>
+                                    <span class="pull-left"><stl:content type="AddDate" formatString="yyyy.MM.dd hh:mm"></stl:content></span> </div>
+                                </div>
+                                <stl:if testType="ImageUrl" testOperate="NotEmpty">
+                                  <div class="wz_r"> <img src="{Content.ImageUrl}" alt="{Content.ImageUrl}"> </div>
+                                </stl:if>
+                                </stl:a> </dd>
+                            </stl:no>
+                          </stl:if>
+                        </stl:pageContents>
+                      </dl>
+                    </dd>
+                  </dl>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="dateclass fz_modal new_list" style="display:none">
+            <dl class="detailnum" id ="notebook">
+            </dl>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!--return top end-->
+    <stl:include file="/include/fixed.html"></stl:include>
+    <stl:include file="/include/footer.html"></stl:include>
+  </body>
+  <script type="text/javascript" src="{Stl.SiteUrl}/js/jweixin-1.0.0.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.scrollify.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/main.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.qrcode.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.validate-1.13.1.js"></script>
+  <script src="{Stl.SiteUrl}/js/fingerprint.js"></script>
+  <script src="{Stl.SiteUrl}/js/common.js?t=2017050502"></script>
+  <script src="{Stl.SiteUrl}/js/spin.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.pjax.js"></script>
+  <script src="{Stl.SiteUrl}/js/artilceslist.js"></script>
+  <script src="{Stl.SiteUrl}/js/jquery.noty.packaged.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/typeahead.bundle.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/bootstrap-tagsinput.min.js"></script>
+  <script src="{Stl.SiteUrl}/js/search.js"></script>
+</html>

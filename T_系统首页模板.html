@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="screen-scroll">
+  <head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>{Channel.Title} - {Stl.SiteName}</title>
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{Stl.SiteUrl}/css/bootstrap-tagsinput.css">
+    <link href="{Stl.SiteUrl}/css/adetails.css" rel="stylesheet">
+    <script src="{Stl.SiteUrl}/js/hm.js"></script>
+    <script src="{Stl.SiteUrl}/js/jquery.min.js"></script>
+    
+    <script src="{Stl.SiteUrl}/js/bootstrap.min.js"></script>
+  </head>
+  <body class="per_main details">
+    <stl:include file="/include/nav.html"></stl:include>
+    <div class="notybox"></div>
+    <div class="main">
+      <div class="screen_con">
+        <div class="background-size-full q">
+          <div class="post-field p-cover ">
+            <div class="cover-image" style="background-image : url({Stl.SiteUrl}/images/preface3.jpg);"></div>
+            <div class="image-mask-down" style="background: url({Stl.SiteUrl}/images/bg_zz.png) repeat;opacity: 0.15;filter: alpha(opacity=15)"></div>
+            <div class="userbox" style="overflow: hidden; width: auto; height: 100%;">
+              <div class="userintro">
+                <div class="base-info">
+                  <div class="relative">
+                    <div class="avatar-name"> <span class="faspan"> <span class="editable_span" zn="blog_name" contenteditable="false">{Channel.top1.Title}</span>  </span> </div>
+                    <div class="avatar-photo color_e58951"> <a href="javascript:;"> <span class="s"><stl:channel topLevel="1" wordNum="1" ellipsis=" " type="Title"></stl:channel></span> <span class="c" style="display: none; margin-top: -17.5px; opacity: 0.7;">{Channel.top1.Title}</span> <span title="{Channel.top1.Title}" class="V_king V_king_l"> <img src="{Stl.SiteUrl}/images/kingl.png" alt=""> </span> </a> </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!--个人简介   -->
+              <div id="con_js" class="con_js">
+                <div class="wrap">
+                  <div>
+                    {Channel.top1.Content}
+                  </div>
+                </div>
+                <div id="read-more"></div>
+              </div>
+              <!--文章热度统计-->
+              <div class="p_hot">
+                <div class="p_hot_inner">
+                  <div class="zs"><i class="fa fa-quote-left "></i></div>
+                  <ul class="p_hot_num">
+                    <li class="ll">浏览数<span id="readnum"><stl:analysis type="PageView" scope="Site" style="Number"></stl:analysis></span></li>
+                    <li class="wz">文章数<span id="articlenum"><stl:count channelIndex="首页" scope="All"></stl:count></span></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--导航开始-->
+        <stl:include file="/include/nav.html"></stl:include>
+        <!--导航结束--> 
+        
+        <!--    正文 -->
+        <div class="post-page-wrapper q_list" id="noteArea">
+          <div class="post-page-wrapper-inner">
+            <div class="container">
+              <div class="content_box">
+                <div class="span7 post-content">
+                  <div class="zx_list">
+                    <div class="list_title">最新<img src="{Stl.SiteUrl}/images/wenzhang1.png" alt=""></div>
+                    <ul class="wz_list">
+                      <stl:pageContents pageNum="10" topLevel="0" scope="All" order="AddDate">
+                        <stl:if testType="IsRecommend" testOperate="Equals" testValue="true">
+                          <stl:yes>
+                            <li class="zxwz_new li-noimg" aid="910055999"> <stl:a target="_blank">
+                              <div class="wz_l">
+                                <h3> <img src="{Stl.SiteUrl}/images/jian.png" alt="{Content.ImageUrl}"><stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></h3>
+                                <div class="p_div">
+                                  <p>
+                                    <stl:if testType="Summary" testOperate="NotEmpty">
+                                      <stl:yes>
+                                        <stl:content type="Summary" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:yes>
+                                      <stl:no>
+                                        <stl:content type="Content" isClearTags="true" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:no>
+                                    </stl:if>
+                                  </p>
+                                </div>
+                                <div class="wz_t">
+                                  <ul class="num_hot" id="num_hot_910055999">
+                                    <li><i class="icon-eye"><img src="{Stl.SiteUrl}/images/shu.png" alt=""></i><stl:content type="Hits"></stl:content></li>
+                                  </ul>
+                                  <span class="pull-left"><stl:content type="AddDate" formatString="yyyy.MM.dd hh:mm"></stl:content></span> </div>
+                              </div>
+                              </stl:a> </li>
+                          </stl:yes>
+                          <stl:no>
+                            <li class="zxwz_new" aid="490569255"> <stl:a target="_blank">
+                              <div class="wz_l">
+                                <h3> <stl:content type="Title" wordNum="30" ellipsis="..."></stl:content></h3>
+                                <div class="p_div">
+                                  <p>
+                                    <stl:if testType="Summary" testOperate="NotEmpty">
+                                      <stl:yes>
+                                        <stl:content type="Summary" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:yes>
+                                      <stl:no>
+                                        <stl:content type="Content" isClearTags="true" wordNum="145" ellipsis="..."></stl:content>
+                                      </stl:no>
+                                    </stl:if>
+                                  </p>
+                                  <stl:if testType="ImageUrl" testOperate="NotEmpty">
+                                    <div class="wz_r"> <img src="{Content.ImageUrl}" alt="{Content.ImageUrl}"> </div>
+                                  </stl:if>
+                                </div>
+                                <div class="wz_t">
+                                  <ul class="num_hot" id="num_hot_490569255">
+                                    <li><i class="icon-eye"><img src="{Stl.SiteUrl}/images/shu.png" alt=""></i><stl:content type="Hits"></stl:content></li>
+                                  </ul>
+                                  <span class="pull-left"><stl:content type="AddDate" formatString="yyyy.MM.dd hh:mm"></stl:content></span> </div>
+                              </div>
+                              </stl:a> </li>
+                          </stl:no>
+                        </stl:if>
+                      </stl:pageContents>
+                    </ul>
+                    
+                    
+                    <div class="effect-oscar add_btn_new_article " style="display:none;"><span class="add_btn addarticle">
+                      <p>+</p>
+                      <a href="javascript:;">点击加载更多</a> </span></div>
+                  </div>
+                  <div class="zr_list" id="zr_list" style="display:none">
+                    <div class="list_title">责任<img src="{Stl.SiteUrl}/images/zhuangti1.png" alt=""></div>
+                    <ul class="zt_list" id="article_zt_list">
+                    </ul>
+                    
+                    <div class="effect-oscar add_btn_new_zt"><span class="add_btn Collectionaddmany">
+                      <p>+</p>
+                      <a href="javascript:;">点击加载更多</a> </span></div>
+                  </div>
+                </div>
+                <stl:include file="/include/right.html"></stl:include>
+              </div>
+            </div>
+          </div>
+        </div>
+        <stl:include file="/include/footer.html"></stl:include>
+      </div>
+    </div>
+    <stl:include file="/include/fixed.html"></stl:include>
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/jweixin-1.0.0.js"></script> 
+    <script src="{Stl.SiteUrl}/js/jquery.scrollify.min.js"></script> 
+    <script src="{Stl.SiteUrl}/js/main.js"></script> 
+    <script src="{Stl.SiteUrl}/js/jquery.qrcode.min.js"></script> 
+    <script src="{Stl.SiteUrl}/js/jquery.validate-1.13.1.js"></script> 
+    <script src="{Stl.SiteUrl}/js/fingerprint.js"></script>
+    <script src="{Stl.SiteUrl}/js/common.js"></script>  
+    <script src="{Stl.SiteUrl}/js/articlesmain.js"></script>
+    <script src="{Stl.SiteUrl}/js/articlesmain.js"></script> 
+    <script src="{Stl.SiteUrl}/js/jquery.noty.packaged.min.js"></script> 
+    <script src="{Stl.SiteUrl}/js/search.js"></script> 
+    <script type="text/javascript" src="{Stl.SiteUrl}/js/weixinhome.js"></script>
+  </body>
+</html>
